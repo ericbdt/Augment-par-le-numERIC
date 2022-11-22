@@ -1,2 +1,2 @@
-# IN204 by Vincent and Eric, currently in Milano for the weekend
+# IN204 by Vincent and Eric
 inch ça sera bien
