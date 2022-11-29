@@ -9,6 +9,16 @@
 /mnt/c/Users/ericb/OneDrive/Bureau/ENSTA/2A/Projet IN204/Augment-par-le-numERIC/repository/src/main.cpp
 cstdio
 -
+iostream
+-
+SFML/Graphics.hpp
+-
+SFML/System.hpp
+-
 SFML/Window.hpp
+-
+SFML/Audio.hpp
+-
+SFML/Network.hpp
 -
 
