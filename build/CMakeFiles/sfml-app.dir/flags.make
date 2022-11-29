@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wextra -std=c++2a -g -std=c++2a
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/mnt/c/Users/ericb/OneDrive/Bureau/ENSTA/2A/Projet IN204/Augment-par-le-numERIC/repository/inc" 
+CXX_INCLUDES = -I"../repository/inc" 
 

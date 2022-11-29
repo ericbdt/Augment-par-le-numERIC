@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/ericb/OneDrive/Bureau/ENSTA/2A/Projet IN204/Augment-par-le-numERIC/repository/src/main.cpp
+../repository/src/main.cpp
 cstdio
 -
 iostream
