@@ -14,14 +14,14 @@
 
 int main()
 {
-    // Window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Le Game", sf::Style::Titlebar | sf::Style::Close);
+    // Window : création de la fenêtre
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Le Game", sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize);
     sf::Event ev;
 
-    // Game loop
+    // Game loop : boucle principale
     while (window.isOpen())
     {
-        // Event polling
+        // Event polling : on scan pour les évènements et on stocke dans ev
         while (window.pollEvent(ev))
         {
             switch (ev.type)
@@ -38,14 +38,15 @@ int main()
             }
         }
 
-        // Update
+        // Update : Mise à jour de l'état du jeu
 
-        // Render
-        window.clear(sf::Color::Blue); // Clear old frame
+        // Render : Dessiner le nouvel état
+        window.clear(sf::Color::Blue); // Clear la dernière image
 
         // DRAW HERE
 
-        window.display(); // Tell app the window is done drawing
+        // Display : Afficher la nouvelle frame
+        window.display(); // Dit à la fenêtre qu'on a finit de dessiner
     }
 
     // End
