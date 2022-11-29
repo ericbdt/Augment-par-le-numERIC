@@ -1,10 +1,6 @@
 #include <cstdio>
 #include <iostream>
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
+#include "Game.hpp"
 
 // TO COMPILE LE GAME
 // g++ -c main.cpp
@@ -14,39 +10,16 @@
 
 int main()
 {
-    // Window : création de la fenêtre
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Le Game", sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize);
-    sf::Event ev;
+
+    // Init game engine
+    Game game;
 
     // Game loop : boucle principale
-    while (window.isOpen())
+    while (game.isRunning())
     {
-        // Event polling : on scan pour les évènements et on stocke dans ev
-        while (window.pollEvent(ev))
-        {
-            switch (ev.type)
-            {
-            case sf::Event::Closed:
-                window.close();
-                break;
-            case sf::Event::KeyPressed:
-                if (ev.key.code == sf::Keyboard::Escape)
-                {
-                    window.close();
-                }
-                break;
-            }
-        }
+        game.update();
 
-        // Update : Mise à jour de l'état du jeu
-
-        // Render : Dessiner le nouvel état
-        window.clear(sf::Color::Blue); // Clear la dernière image
-
-        // DRAW HERE
-
-        // Display : Afficher la nouvelle frame
-        window.display(); // Dit à la fenêtre qu'on a finit de dessiner
+        game.render();
     }
 
     // End

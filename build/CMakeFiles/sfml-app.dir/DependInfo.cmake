@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Game.cpp" "CMakeFiles/sfml-app.dir/src/Game.cpp.o" "gcc" "CMakeFiles/sfml-app.dir/src/Game.cpp.o.d"
   "/home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/main.cpp" "CMakeFiles/sfml-app.dir/src/main.cpp.o" "gcc" "CMakeFiles/sfml-app.dir/src/main.cpp.o.d"
   )
 
