@@ -1,3 +1,0 @@
-../build/CMakeFiles/rebuild_cache.dir
-../build/CMakeFiles/edit_cache.dir
-../build/CMakeFiles/sfml-app.dir

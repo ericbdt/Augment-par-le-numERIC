@@ -1,7 +1,0 @@
-[
-{
-  "directory": "../build",
-  "command": "g++   -I\"../repository/inc\"  -g   -Wall -Wextra -std=c++2a -g -std=c++2a -o CMakeFiles/sfml-app.dir/src/main.cpp.o -c \"/mnt/c/Users/ericb/OneDrive/Bureau/ENSTA/2A/Projet IN204/Augment-par-le-numERIC/repository/src/main.cpp\"",
-  "file": "../repository/src/main.cpp"
-}
-]

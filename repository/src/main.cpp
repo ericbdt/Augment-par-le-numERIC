@@ -41,7 +41,7 @@ int main()
         // Update
 
         // Render
-        window.clear(sf::Color::Green); // Clear old frame
+        window.clear(sf::Color::Blue); // Clear old frame
 
         // DRAW HERE
 
