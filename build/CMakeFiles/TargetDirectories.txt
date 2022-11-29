@@ -1,0 +1,3 @@
+/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles/sfml-app.dir
+/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles/edit_cache.dir
+/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles/rebuild_cache.dir
