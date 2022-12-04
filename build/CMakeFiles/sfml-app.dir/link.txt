@@ -1,1 +1,1 @@
-g++ -g CMakeFiles/sfml-app.dir/src/Game.cpp.o CMakeFiles/sfml-app.dir/src/main.cpp.o -o sfml-app  -lsfml-audio -lsfml-network -lsfml-graphics -lsfml-window -lsfml-system 
+g++ -g CMakeFiles/sfml-app.dir/src/Enemy.cpp.o CMakeFiles/sfml-app.dir/src/Game.cpp.o CMakeFiles/sfml-app.dir/src/Player.cpp.o CMakeFiles/sfml-app.dir/src/main.cpp.o -o sfml-app  -lsfml-audio -lsfml-network -lsfml-graphics -lsfml-window -lsfml-system 

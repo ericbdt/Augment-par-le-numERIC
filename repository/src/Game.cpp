@@ -4,6 +4,9 @@
 void Game::init_var() // initialise tous les pointeurs et variables
 {
     this->window = nullptr;
+    this->spawn_timer_max = 30.f;
+    this->spawn_timer = this->spawn_timer_max;
+    this->max_enemies = 5;
 }
 
 void Game::init_win()
@@ -13,6 +16,7 @@ void Game::init_win()
     this->videomode.width = 800;
     // /!\ Allocation dynamique il faudra supprimer dans le Dtor
     this->window = new sf::RenderWindow(this->videomode, "Le Game", sf::Style::Titlebar | sf::Style::Close);
+    this->window->setFramerateLimit(60);
 }
 
 // Ctors & Dtors
@@ -41,6 +45,8 @@ const bool Game::isRunning() const
 void Game::update()
 {
     this->updateEvents();
+    this->spawnEnemies();
+    this->player.update(this->window);
 }
 
 // Event updating/polling : on scan pour les évènements et on stocke dans ev
@@ -69,6 +75,31 @@ void Game::render()
     this->window->clear(sf::Color(200, 174, 40, 255)); // Clear la dernière image
 
     // Draw here
+    this->player.render(this->window);
+
+    for (auto e : this->enemies)
+    {
+        e.render(this->window);
+    }
+
+    // End Draw
 
     this->window->display(); // Display : Afficher la nouvelle frame
+}
+
+// invoque de nouveaux ennemis
+void Game::spawnEnemies()
+{
+    // Timer
+    if (this->spawn_timer < this->spawn_timer_max)
+        this->spawn_timer += 1.f;
+    else
+    {
+        if (this->enemies.size() < this->max_enemies)
+        {
+            this->enemies.push_back(Enemy(*this->window));
+            std::cout << "new enemy yay" << std::endl;
+            this->spawn_timer = 0.f;
+        }
+    }
 }

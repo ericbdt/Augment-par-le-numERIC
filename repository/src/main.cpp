@@ -13,6 +13,8 @@ int main()
 
     // Init game engine
     Game game;
+    // Randomize rand seed for spawns
+    srand(time(NULL));
 
     // Game loop : boucle principale
     while (game.isRunning())

@@ -1,8 +1,13 @@
-CMakeFiles/sfml-app.dir/src/Game.cpp.o: \
- /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Game.cpp \
+CMakeFiles/sfml-app.dir/src/Player.cpp.o: \
+ /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Player.cpp \
  /usr/include/stdc-predef.h \
- /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Game.hpp \
- /usr/include/c++/11/iostream \
+ /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Player.hpp \
+ /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
+ /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
+ /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
+ /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Err.hpp \
+ /usr/include/c++/11/ostream /usr/include/c++/11/ios \
+ /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -13,8 +18,7 @@ CMakeFiles/sfml-app.dir/src/Game.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
- /usr/include/c++/11/pstl/pstl_config.h /usr/include/c++/11/ostream \
- /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
+ /usr/include/c++/11/pstl/pstl_config.h \
  /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
  /usr/include/c++/11/cwchar /usr/include/wchar.h \
@@ -156,16 +160,7 @@ CMakeFiles/sfml-app.dir/src/Game.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
- /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/ctime \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/SFML/Graphics.hpp \
- /usr/include/SFML/Window.hpp /usr/include/SFML/System.hpp \
- /usr/include/SFML/Config.hpp /usr/include/SFML/System/Clock.hpp \
- /usr/include/SFML/System/Export.hpp /usr/include/SFML/System/Time.hpp \
- /usr/include/SFML/System/Err.hpp \
+ /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/SFML/System/FileInputStream.hpp \
  /usr/include/SFML/System/InputStream.hpp \
  /usr/include/SFML/System/NonCopyable.hpp \
@@ -191,9 +186,13 @@ CMakeFiles/sfml-app.dir/src/Game.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/locale \
- /usr/include/c++/11/bits/locale_facets_nonio.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
@@ -273,10 +272,9 @@ CMakeFiles/sfml-app.dir/src/Game.cpp.o: \
  /usr/include/SFML/Network/Socket.hpp \
  /usr/include/SFML/Network/SocketHandle.hpp \
  /usr/include/SFML/Network/Http.hpp \
- /usr/include/SFML/Network/IpAddress.hpp \
+ /usr/include/SFML/Network/IpAddress.hpp /usr/include/c++/11/istream \
+ /usr/include/c++/11/bits/istream.tcc \
  /usr/include/SFML/Network/Packet.hpp \
  /usr/include/SFML/Network/SocketSelector.hpp \
  /usr/include/SFML/Network/TcpListener.hpp \
- /usr/include/SFML/Network/UdpSocket.hpp \
- /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Player.hpp \
- /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Enemy.hpp
+ /usr/include/SFML/Network/UdpSocket.hpp
