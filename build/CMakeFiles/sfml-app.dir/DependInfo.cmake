@@ -1,17 +1,19 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/ensta/IN204/Augment-par-le-numERIC/repository/src/Enemy.cpp" "/home/ensta/IN204/Augment-par-le-numERIC/build/CMakeFiles/sfml-app.dir/src/Enemy.cpp.o"
+  "/home/ensta/IN204/Augment-par-le-numERIC/repository/src/Game.cpp" "/home/ensta/IN204/Augment-par-le-numERIC/build/CMakeFiles/sfml-app.dir/src/Game.cpp.o"
+  "/home/ensta/IN204/Augment-par-le-numERIC/repository/src/Player.cpp" "/home/ensta/IN204/Augment-par-le-numERIC/build/CMakeFiles/sfml-app.dir/src/Player.cpp.o"
+  "/home/ensta/IN204/Augment-par-le-numERIC/repository/src/main.cpp" "/home/ensta/IN204/Augment-par-le-numERIC/build/CMakeFiles/sfml-app.dir/src/main.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Enemy.cpp" "CMakeFiles/sfml-app.dir/src/Enemy.cpp.o" "gcc" "CMakeFiles/sfml-app.dir/src/Enemy.cpp.o.d"
-  "/home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Game.cpp" "CMakeFiles/sfml-app.dir/src/Game.cpp.o" "gcc" "CMakeFiles/sfml-app.dir/src/Game.cpp.o.d"
-  "/home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Player.cpp" "CMakeFiles/sfml-app.dir/src/Player.cpp.o" "gcc" "CMakeFiles/sfml-app.dir/src/Player.cpp.o.d"
-  "/home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/main.cpp" "CMakeFiles/sfml-app.dir/src/main.cpp.o" "gcc" "CMakeFiles/sfml-app.dir/src/main.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/ensta/IN204/Augment-par-le-numERIC/repository/inc"
   )
 
 # Targets to which this target links.
