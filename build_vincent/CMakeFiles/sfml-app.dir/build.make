@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build
+CMAKE_BINARY_DIR = /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sfml-app.dir/depend.make
@@ -72,7 +72,7 @@ include CMakeFiles/sfml-app.dir/flags.make
 CMakeFiles/sfml-app.dir/src/Enemy.cpp.o: CMakeFiles/sfml-app.dir/flags.make
 CMakeFiles/sfml-app.dir/src/Enemy.cpp.o: /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Enemy.cpp
 CMakeFiles/sfml-app.dir/src/Enemy.cpp.o: CMakeFiles/sfml-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sfml-app.dir/src/Enemy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sfml-app.dir/src/Enemy.cpp.o"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sfml-app.dir/src/Enemy.cpp.o -MF CMakeFiles/sfml-app.dir/src/Enemy.cpp.o.d -o CMakeFiles/sfml-app.dir/src/Enemy.cpp.o -c /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Enemy.cpp
 
 CMakeFiles/sfml-app.dir/src/Enemy.cpp.i: cmake_force
@@ -86,7 +86,7 @@ CMakeFiles/sfml-app.dir/src/Enemy.cpp.s: cmake_force
 CMakeFiles/sfml-app.dir/src/Game.cpp.o: CMakeFiles/sfml-app.dir/flags.make
 CMakeFiles/sfml-app.dir/src/Game.cpp.o: /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Game.cpp
 CMakeFiles/sfml-app.dir/src/Game.cpp.o: CMakeFiles/sfml-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sfml-app.dir/src/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sfml-app.dir/src/Game.cpp.o"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sfml-app.dir/src/Game.cpp.o -MF CMakeFiles/sfml-app.dir/src/Game.cpp.o.d -o CMakeFiles/sfml-app.dir/src/Game.cpp.o -c /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Game.cpp
 
 CMakeFiles/sfml-app.dir/src/Game.cpp.i: cmake_force
@@ -100,7 +100,7 @@ CMakeFiles/sfml-app.dir/src/Game.cpp.s: cmake_force
 CMakeFiles/sfml-app.dir/src/Player.cpp.o: CMakeFiles/sfml-app.dir/flags.make
 CMakeFiles/sfml-app.dir/src/Player.cpp.o: /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Player.cpp
 CMakeFiles/sfml-app.dir/src/Player.cpp.o: CMakeFiles/sfml-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sfml-app.dir/src/Player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sfml-app.dir/src/Player.cpp.o"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sfml-app.dir/src/Player.cpp.o -MF CMakeFiles/sfml-app.dir/src/Player.cpp.o.d -o CMakeFiles/sfml-app.dir/src/Player.cpp.o -c /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Player.cpp
 
 CMakeFiles/sfml-app.dir/src/Player.cpp.i: cmake_force
@@ -114,7 +114,7 @@ CMakeFiles/sfml-app.dir/src/Player.cpp.s: cmake_force
 CMakeFiles/sfml-app.dir/src/main.cpp.o: CMakeFiles/sfml-app.dir/flags.make
 CMakeFiles/sfml-app.dir/src/main.cpp.o: /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/main.cpp
 CMakeFiles/sfml-app.dir/src/main.cpp.o: CMakeFiles/sfml-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sfml-app.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sfml-app.dir/src/main.cpp.o"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sfml-app.dir/src/main.cpp.o -MF CMakeFiles/sfml-app.dir/src/main.cpp.o.d -o CMakeFiles/sfml-app.dir/src/main.cpp.o -c /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/main.cpp
 
 CMakeFiles/sfml-app.dir/src/main.cpp.i: cmake_force
@@ -141,7 +141,7 @@ sfml-app: CMakeFiles/sfml-app.dir/src/Player.cpp.o
 sfml-app: CMakeFiles/sfml-app.dir/src/main.cpp.o
 sfml-app: CMakeFiles/sfml-app.dir/build.make
 sfml-app: CMakeFiles/sfml-app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable sfml-app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable sfml-app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/sfml-app.dir/clean:
 .PHONY : CMakeFiles/sfml-app.dir/clean
 
 CMakeFiles/sfml-app.dir/depend:
-	cd /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build/CMakeFiles/sfml-app.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent /home/vincent/2A/projet_in204/Augment-par-le-numERIC/build_vincent/CMakeFiles/sfml-app.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sfml-app.dir/depend
 

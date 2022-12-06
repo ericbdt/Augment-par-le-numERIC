@@ -50,7 +50,7 @@ public:
     virtual ~Game();
 
     // Getters
-    const bool isRunning() const;
+    bool isRunning() const;
 
     // Event Functions
     void spawnEnemies();

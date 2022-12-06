@@ -34,7 +34,7 @@ Game::~Game()
 }
 
 // Getters
-const bool Game::isRunning() const
+bool Game::isRunning() const
 {
     return this->window->isOpen();
 }
@@ -52,7 +52,7 @@ void Game::update()
     //     e.update(&this->player, this->window);
     // }
 
-    for (int i = 0; i < this->enemies.size(); ++i)
+    for (unsigned int i = 0; i < this->enemies.size(); ++i)
     {
         enemies[i].update(&this->player, this->window);
     }
