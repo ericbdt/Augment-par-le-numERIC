@@ -1,4 +1,9 @@
 #include "Enemy.hpp"
+#include "Player.hpp"
+#include "Game.hpp"
+#include <cmath>
+#include <iostream>
+
 
 void Enemy::init_var()
 {
@@ -26,13 +31,30 @@ Enemy::~Enemy()
 {
 }
 
-void Enemy::update(const sf::RenderTarget *target)
+void Enemy::updateInput(Player *player) 
 {
+    sf::Vector2f coord_p = player->get_Position(); //coordonnées joueur
+    sf::Vector2f coord_npc = this->shape.getPosition();
+
+    sf::Vector2f direction = coord_p-coord_npc;
+    direction = direction / (std::sqrt(direction.x*direction.x + direction.y*direction.y));
+    direction = direction*this->movement_speed;
+    printf("%f,%f \n",direction.x, direction.y);
+
+    this->shape.move(direction.x,direction.y);
+
+}   
+
+
+
+void Enemy::update(Player *player, const sf::RenderTarget *target)
+{  
+
     // Collison
     // this->updateCollision(target)
 
-    // Entrées clavier
-    // this->updateInput();
+    // Déplacement automatique
+    this->updateInput(player);
 }
 
 void Enemy::render(sf::RenderTarget *target)

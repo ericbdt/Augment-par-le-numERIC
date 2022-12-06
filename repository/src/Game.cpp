@@ -47,6 +47,18 @@ void Game::update()
     this->updateEvents();
     this->spawnEnemies();
     this->player.update(this->window);
+
+    // for (auto e : this-> enemies) { 
+    //     e.update(&this->player, this->window);
+    // }
+
+    for (int i = 0; i< this->max_enemies;++i)
+    {
+        enemies[i].update(&this->player, this->window);
+    }
+
+
+
 }
 
 // Event updating/polling : on scan pour les évènements et on stocke dans ev

@@ -5,7 +5,9 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
+#include "Player.hpp"
 
+class Player;
 class Enemy
 {
 private:
@@ -20,7 +22,8 @@ public:
     Enemy(const sf::RenderWindow &window);
     virtual ~Enemy();
 
-    void update(const sf::RenderTarget *target);
+    void update(Player *player,const sf::RenderTarget *target);
+    void updateInput(Player *player);
     void render(sf::RenderTarget *target);
 };
 

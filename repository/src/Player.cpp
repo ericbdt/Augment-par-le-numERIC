@@ -23,6 +23,13 @@ Player::~Player()
 {
 }
 
+sf::Vector2f Player::get_Position() 
+{
+    return(this->shape.getPosition());
+
+}
+
+
 // Entrées clavier
 void Player::updateInput()
 {
@@ -69,6 +76,7 @@ void Player::update(const sf::RenderTarget *target)
     // Entrées clavier
     this->updateInput();
 }
+
 
 void Player::render(sf::RenderTarget *target)
 {
