@@ -6,7 +6,7 @@ void Game::init_var() // initialise tous les pointeurs et variables
     this->window = nullptr;
     this->spawn_timer_max = 30.f;
     this->spawn_timer = this->spawn_timer_max;
-    this->max_enemies = 5;
+    this->max_enemies = 6;
 }
 
 void Game::init_win()
@@ -48,17 +48,14 @@ void Game::update()
     this->spawnEnemies();
     this->player.update(this->window);
 
-    // for (auto e : this-> enemies) { 
+    // for (auto e : this-> enemies) {
     //     e.update(&this->player, this->window);
     // }
 
-    for (int i = 0; i< this->max_enemies;++i)
+    for (int i = 0; i < this->enemies.size(); ++i)
     {
         enemies[i].update(&this->player, this->window);
     }
-
-
-
 }
 
 // Event updating/polling : on scan pour les évènements et on stocke dans ev

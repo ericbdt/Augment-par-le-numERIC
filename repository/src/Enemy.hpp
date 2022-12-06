@@ -23,7 +23,7 @@ public:
     virtual ~Enemy();
 
     void update(Player *player,const sf::RenderTarget *target);
-    void updateInput(Player *player);
+    void updateMovement(Player *player);
     void render(sf::RenderTarget *target);
 };
 
