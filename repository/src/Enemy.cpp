@@ -28,9 +28,14 @@ Enemy::~Enemy()
 {
 }
 
+sf::Vector2f Enemy::getPosition() const
+{
+    return (this->shape.getPosition());
+}
+
 void Enemy::updateMovement(Player *player)
 {
-    sf::Vector2f coord_p = player->get_Position();      // coordonnées joueur
+    sf::Vector2f coord_p = player->getPosition();       // coordonnées joueur
     sf::Vector2f coord_npc = this->shape.getPosition(); // coordonnées ennemi
 
     sf::Vector2f direction = coord_p - coord_npc;                                               // direction vers le joueur

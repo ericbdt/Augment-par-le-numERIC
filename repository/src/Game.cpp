@@ -4,8 +4,10 @@
 void Game::init_var() // initialise tous les pointeurs et variables
 {
     this->window = nullptr;
+    this->fire_timer_max = 120.f;
+    this->fire_timer = 0.f;
     this->spawn_timer_max = 30.f;
-    this->spawn_timer = this->spawn_timer_max;
+    this->spawn_timer = 0.f;
     this->max_enemies = 20;
 }
 
@@ -46,15 +48,19 @@ void Game::update()
 {
     this->updateEvents();
     this->spawnEnemies();
+    this->playerFire();
     this->player.update(this->window);
 
-    // for (auto e : this-> enemies) {
-    //     e.update(&this->player, this->window);
-    // }
-
+    // Update enemies
     for (unsigned int i = 0; i < this->enemies.size(); ++i)
     {
         enemies[i].update(&this->player, this->enemies, this->window);
+    }
+
+    // Update projectiles
+    for (unsigned int i = 0; i < this->friendly_projectiles.size(); ++i)
+    {
+        friendly_projectiles[i].update();
     }
 }
 
@@ -91,6 +97,11 @@ void Game::render()
         e.render(this->window);
     }
 
+    for (auto p : this->friendly_projectiles)
+    {
+        p.render(this->window);
+    }
+
     // End Draw
 
     this->window->display(); // Display : Afficher la nouvelle frame
@@ -109,6 +120,28 @@ void Game::spawnEnemies()
             this->enemies.push_back(Enemy(*this->window));
             std::cout << "new enemy yay" << std::endl;
             this->spawn_timer = 0.f;
+        }
+    }
+}
+
+// tire des projectiles
+void Game::playerFire()
+{
+    // Timer
+    if (this->fire_timer < this->fire_timer_max)
+        this->fire_timer += 1.f;
+    else
+    {
+        if (this->friendly_projectiles.size() < 10)
+        {
+            this->friendly_projectiles.push_back(
+                Projectile(this->player.getCenter(),                               // Position
+                           this->player.getDirectionToNearestEnemy(this->enemies), // Direction
+                           5.f,                                                    // Speed
+                           10.f,                                                   // Damage
+                           true));                                                 // Friendly
+            std::cout << "fire !" << std::endl;
+            this->fire_timer = 0.f;
         }
     }
 }

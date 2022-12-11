@@ -16,6 +16,7 @@
 // Librairies crées
 #include "Player.hpp"
 #include "Enemy.hpp"
+#include "Projectile.hpp"
 
 /*
 Classe qui agit comme moteur de jeu
@@ -34,6 +35,9 @@ private:
 
     // Player
     Player player;
+    std::vector<Projectile> friendly_projectiles;
+    float fire_timer;
+    float fire_timer_max;
 
     std::vector<Enemy> enemies;
     float spawn_timer_max;
@@ -54,6 +58,7 @@ public:
 
     // Event Functions
     void spawnEnemies();
+    void playerFire();
 
     // Game Functions
     void update();

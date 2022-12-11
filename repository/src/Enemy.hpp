@@ -6,8 +6,9 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 #include "Player.hpp"
+#include "Projectile.hpp"
 
-class Player;
+class Player; // Prevents circle dependency
 class Enemy
 {
 private:
@@ -21,6 +22,8 @@ private:
 public:
     Enemy(const sf::RenderWindow &window);
     virtual ~Enemy();
+
+    sf::Vector2f getPosition() const;
 
     void update(Player *player, std::vector<Enemy> &enemies, const sf::RenderTarget *target);
     void updateMovement(Player *player);
