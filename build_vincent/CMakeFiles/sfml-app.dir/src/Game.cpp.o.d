@@ -279,4 +279,5 @@ CMakeFiles/sfml-app.dir/src/Game.cpp.o: \
  /usr/include/SFML/Network/TcpListener.hpp \
  /usr/include/SFML/Network/UdpSocket.hpp \
  /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Player.hpp \
- /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Enemy.hpp
+ /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Enemy.hpp \
+ /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Projectile.hpp

@@ -279,6 +279,7 @@ CMakeFiles/sfml-app.dir/src/Enemy.cpp.o: \
  /usr/include/SFML/Network/TcpListener.hpp \
  /usr/include/SFML/Network/UdpSocket.hpp \
  /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Player.hpp \
+ /home/vincent/2A/projet_in204/Augment-par-le-numERIC/repository/src/Projectile.hpp \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
