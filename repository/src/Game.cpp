@@ -6,7 +6,7 @@ void Game::init_var() // initialise tous les pointeurs et variables
     this->window = nullptr;
     this->spawn_timer_max = 30.f;
     this->spawn_timer = this->spawn_timer_max;
-    this->max_enemies = 6;
+    this->max_enemies = 20;
 }
 
 void Game::init_win()
@@ -54,7 +54,7 @@ void Game::update()
 
     for (unsigned int i = 0; i < this->enemies.size(); ++i)
     {
-        enemies[i].update(&this->player, this->window);
+        enemies[i].update(&this->player, this->enemies, this->window);
     }
 }
 

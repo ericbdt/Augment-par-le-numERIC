@@ -22,8 +22,13 @@ public:
     Enemy(const sf::RenderWindow &window);
     virtual ~Enemy();
 
-    void update(Player *player,const sf::RenderTarget *target);
+    void update(Player *player, std::vector<Enemy> &enemies, const sf::RenderTarget *target);
     void updateMovement(Player *player);
+
+    void updateCollision(sf::Vector2f thisPos, sf::Vector2f thisSize, sf::Vector2f otherPos, sf::Vector2f otherSize, Enemy &other);
+    void checkCollision(Enemy &other);
+    void checkAllCollision(std::vector<Enemy> &enemies);
+
     void render(sf::RenderTarget *target);
 };
 
