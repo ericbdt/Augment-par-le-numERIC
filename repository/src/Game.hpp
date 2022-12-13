@@ -59,6 +59,7 @@ public:
     // Event Functions
     void spawnEnemies();
     void playerFire();
+    void popEnemy(int e);
 
     // Game Functions
     void update();

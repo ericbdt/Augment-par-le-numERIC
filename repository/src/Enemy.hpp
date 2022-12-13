@@ -24,6 +24,7 @@ public:
     virtual ~Enemy();
 
     sf::Vector2f getPosition() const;
+    sf::Vector2f getSize() const;
 
     void update(Player *player, std::vector<Enemy> &enemies, const sf::RenderTarget *target);
     void updateMovement(Player *player);

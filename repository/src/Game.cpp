@@ -8,7 +8,7 @@ void Game::init_var() // initialise tous les pointeurs et variables
     this->fire_timer = 0.f;
     this->spawn_timer_max = 30.f;
     this->spawn_timer = 0.f;
-    this->max_enemies = 20;
+    this->max_enemies = 5;
 }
 
 void Game::init_win()
@@ -60,7 +60,7 @@ void Game::update()
     // Update projectiles
     for (unsigned int i = 0; i < this->friendly_projectiles.size(); ++i)
     {
-        friendly_projectiles[i].update();
+        friendly_projectiles[i].update(this->enemies);
     }
 }
 

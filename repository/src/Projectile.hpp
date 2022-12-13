@@ -1,7 +1,10 @@
 #ifndef PROJECTILE_H
 #define PROJECTILE_H
 #include <SFML/Graphics.hpp>
+#include <vector>
+#include "Enemy.hpp"
 
+class Enemy ; // Prevents circle dependency
 class Projectile
 {
 private:
@@ -20,9 +23,13 @@ public:
     virtual ~Projectile();
 
     // Update the position of the projectile
-    void update();
+    void update(std::vector<Enemy> enemies);
     // Render the projectile
     void render(sf::RenderTarget *target);
+
+    void checkAllAttacks(std::vector<Enemy> &enemies);
+    void attack(Enemy &enemy);
+    void updateAttack(Enemy *target);
 
     float getDamage() const;
     bool isFriendly() const; // Check if the projectile is friendly (i.e. fired by the player)

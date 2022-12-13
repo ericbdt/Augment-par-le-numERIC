@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/ensta/IN204/V2/Augment-par-le-numERIC/build_eric",
+  "command": "g++   -I/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/inc  -g   -Wall -Wextra -std=c++2a -g -std=c++2a -o CMakeFiles/sfml-app.dir/src/Enemy.cpp.o -c /home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/Enemy.cpp",
+  "file": "/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/Enemy.cpp"
+},
+{
+  "directory": "/home/ensta/IN204/V2/Augment-par-le-numERIC/build_eric",
+  "command": "g++   -I/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/inc  -g   -Wall -Wextra -std=c++2a -g -std=c++2a -o CMakeFiles/sfml-app.dir/src/Game.cpp.o -c /home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/Game.cpp",
+  "file": "/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/Game.cpp"
+},
+{
+  "directory": "/home/ensta/IN204/V2/Augment-par-le-numERIC/build_eric",
+  "command": "g++   -I/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/inc  -g   -Wall -Wextra -std=c++2a -g -std=c++2a -o CMakeFiles/sfml-app.dir/src/Player.cpp.o -c /home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/Player.cpp",
+  "file": "/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/Player.cpp"
+},
+{
+  "directory": "/home/ensta/IN204/V2/Augment-par-le-numERIC/build_eric",
+  "command": "g++   -I/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/inc  -g   -Wall -Wextra -std=c++2a -g -std=c++2a -o CMakeFiles/sfml-app.dir/src/Projectile.cpp.o -c /home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/Projectile.cpp",
+  "file": "/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/Projectile.cpp"
+},
+{
+  "directory": "/home/ensta/IN204/V2/Augment-par-le-numERIC/build_eric",
+  "command": "g++   -I/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/inc  -g   -Wall -Wextra -std=c++2a -g -std=c++2a -o CMakeFiles/sfml-app.dir/src/main.cpp.o -c /home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/main.cpp",
+  "file": "/home/ensta/IN204/V2/Augment-par-le-numERIC/repository/src/main.cpp"
+}
+]

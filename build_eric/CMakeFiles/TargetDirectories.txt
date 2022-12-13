@@ -1,0 +1,3 @@
+/home/ensta/IN204/V2/Augment-par-le-numERIC/build_eric/CMakeFiles/rebuild_cache.dir
+/home/ensta/IN204/V2/Augment-par-le-numERIC/build_eric/CMakeFiles/edit_cache.dir
+/home/ensta/IN204/V2/Augment-par-le-numERIC/build_eric/CMakeFiles/sfml-app.dir

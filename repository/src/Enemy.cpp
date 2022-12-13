@@ -26,12 +26,19 @@ Enemy::Enemy(const sf::RenderWindow &window)
 
 Enemy::~Enemy()
 {
+    delete this;
 }
 
 sf::Vector2f Enemy::getPosition() const
 {
     return (this->shape.getPosition());
 }
+
+sf::Vector2f Enemy::getSize() const
+{
+    return(this->shape.getSize());
+}
+
 
 void Enemy::updateMovement(Player *player)
 {
