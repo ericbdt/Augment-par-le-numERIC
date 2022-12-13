@@ -13,7 +13,12 @@ class Player
 {
 
 private:
-    sf::RectangleShape shape;
+    sf::RectangleShape shape; // Acts as a hitbox
+
+    sf::Sprite sprite;
+    sf::Texture texture;
+    void init_sprite();
+    void init_texture();
 
     float movement_speed;
 
@@ -30,6 +35,7 @@ public:
 
     void update(const sf::RenderTarget *target);
     void updateInput();
+    void moveSprite(const float dirX, const float dirY);
 
     // void updateCollision(const sf::RenderTarget *target);
     void render(sf::RenderTarget *target);

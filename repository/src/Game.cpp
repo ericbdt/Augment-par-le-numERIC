@@ -1,7 +1,7 @@
 #include "Game.hpp"
 
 // Private functions
-void Game::init_var() // initialise tous les pointeurs et variables
+void Game::init_var() // initializes all pointers and variables
 {
     this->window = nullptr;
     this->fire_timer_max = 120.f;
@@ -11,27 +11,43 @@ void Game::init_var() // initialise tous les pointeurs et variables
     this->max_enemies = 20;
 }
 
-void Game::init_win()
+void Game::init_win() // initializes all window parameters
 {
-    // this->videomode.getDesktopMode pour obtenir la résolution pc
-    this->videomode.height = 600;
-    this->videomode.width = 800;
-    // /!\ Allocation dynamique il faudra supprimer dans le Dtor
+    // this->videomode.getDesktopMode to get Desktop resolution
+    this->videomode.height = 1024;
+    this->videomode.width = 1024;
+
+    // /!\ Dynamic Allocation
     this->window = new sf::RenderWindow(this->videomode, "Le Game", sf::Style::Titlebar | sf::Style::Close);
     this->window->setFramerateLimit(60);
+
+    // Center Window on the desktop
+    auto desktop = sf::VideoMode::getDesktopMode();
+    sf::Vector2i v(desktop.width / 2 - window->getSize().x / 2, desktop.height / 2 - window->getSize().y / 2);
+    this->window->setPosition(v);
+}
+
+void Game::init_world() // initailizes world background
+{
+    if (!this->world_background_texture.loadFromFile("../repository/data/textures/background.png"))
+    {
+        std::cout << "ERROR::GAME::Could not load background image" << std::endl;
+    }
+    this->world_background_sprite.setTexture(this->world_background_texture);
 }
 
 // Ctors & Dtors
 Game::Game()
 {
-    // /!\ dans cet ordre là
+    // /!\ IN THIS ORDER
     this->init_var();
     this->init_win();
+    this->init_world();
 }
 
 Game::~Game()
 {
-    // /!\ Allocation dynamique
+    // /!\ Dynamic allocation
     delete this->window;
 }
 
@@ -43,7 +59,7 @@ bool Game::isRunning() const
 
 // Functions
 
-// Update : Mise à jour de l'état du jeu
+// Update : Updates the game state
 void Game::update()
 {
     this->updateEvents();
@@ -64,7 +80,7 @@ void Game::update()
     }
 }
 
-// Event updating/polling : on scan pour les évènements et on stocke dans ev
+// Event updating/polling : Scanning events and stocking them in ev
 void Game::updateEvents()
 {
     while (this->window->pollEvent(this->ev))
@@ -84,10 +100,13 @@ void Game::updateEvents()
     }
 }
 
-// Render : Dessiner le nouvel état
+// Render : Draw the new game state
 void Game::render()
 {
-    this->window->clear(sf::Color(200, 174, 40, 255)); // Clear la dernière image
+    this->window->clear(sf::Color(200, 174, 40, 255)); // Clears last image
+
+    // Draw World BG
+    this->renderWorld();
 
     // Draw here
     this->player.render(this->window);
@@ -101,13 +120,17 @@ void Game::render()
     {
         p.render(this->window);
     }
-
     // End Draw
 
-    this->window->display(); // Display : Afficher la nouvelle frame
+    this->window->display(); // Displays the new frame
 }
 
-// invoque de nouveaux ennemis
+void Game::renderWorld()
+{
+    this->window->draw(this->world_background_sprite);
+}
+
+// Spawns new enemies
 void Game::spawnEnemies()
 {
     // Timer
@@ -124,7 +147,7 @@ void Game::spawnEnemies()
     }
 }
 
-// tire des projectiles
+// Fires Player projectiles
 void Game::playerFire()
 {
     // Timer

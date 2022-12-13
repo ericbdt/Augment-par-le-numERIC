@@ -2,6 +2,24 @@
 #include <cmath>
 #include <iostream>
 
+void Player::init_texture()
+{
+    // Load texture from file
+    if (!this->texture.loadFromFile("../repository/data/textures/blob.png"))
+    {
+        std::cout << "ERROR::PLAYER::INIT_TEXTURE::Could not load texture file" << std::endl;
+    }
+}
+
+void Player::init_sprite()
+{
+    // Set texture to the sprite
+    this->sprite.setTexture(this->texture);
+
+    // Resize the sprite
+    this->sprite.scale(0.8f, 0.8f);
+}
+
 void Player::init_var()
 {
     this->movement_speed = 5.f;
@@ -9,13 +27,16 @@ void Player::init_var()
 
 void Player::init_shape()
 {
-    this->shape.setFillColor(sf::Color::Blue);
+    // Acts as a hitbox
+    this->shape.setFillColor(sf::Color::Transparent);
     this->shape.setSize(sf::Vector2f(40.f, 40.f));
 }
 
 Player::Player(float x, float y)
 {
     this->shape.setPosition(x, y);
+    this->init_texture();
+    this->init_sprite();
 
     this->init_var();
     this->init_shape();
@@ -33,8 +54,8 @@ sf::Vector2f Player::getPosition() const
 sf::Vector2f Player::getCenter() const
 {
     sf::Vector2f C;
-    C.x = this->shape.getPosition().x + this->shape.getSize().x / 2;
-    C.y = this->shape.getPosition().y + this->shape.getSize().y / 2;
+    C.x = this->getPosition().x + this->shape.getSize().x / 2;
+    C.y = this->getPosition().y + this->shape.getSize().y / 2;
     return C;
 }
 
@@ -59,33 +80,37 @@ sf::Vector2f Player::getDirectionToNearestEnemy(std::vector<Enemy> &enemies) con
     return nearestEnemy->getPosition() - this->getPosition();
 }
 
-// Entrées clavier
+// Keyboard input
 void Player::updateInput()
 {
-    // Gauche
+    // Left
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
     {
         this->shape.move(-this->movement_speed, 0.f);
+        this->moveSprite(-this->movement_speed, 0.f);
     }
 
-    // Droite
+    // Right
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
         this->shape.move(this->movement_speed, 0.f);
+        this->moveSprite(this->movement_speed, 0.f);
     }
 
-    // Utilisation de else if car on ne va pas utiliser les 2 en même temps
+    // else prevents opposite movement to occur (that would immobilize the Player)
 
-    // Haut
+    // Up
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
     {
         this->shape.move(0.f, -this->movement_speed);
+        this->moveSprite(0.f, -this->movement_speed);
     }
 
-    // Bas
+    // Down
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
         this->shape.move(0.f, this->movement_speed);
+        this->moveSprite(0.f, this->movement_speed);
     }
 
     // idem
@@ -102,11 +127,17 @@ void Player::update(const sf::RenderTarget *target)
     // Collison
     // this->updateCollision(target);
 
-    // Entrées clavier
+    // Keyboard input
     this->updateInput();
+}
+
+void Player::moveSprite(const float dirX, const float dirY)
+{
+    this->sprite.move(dirX, dirY);
 }
 
 void Player::render(sf::RenderTarget *target)
 {
     target->draw(this->shape);
+    target->draw(this->sprite);
 }

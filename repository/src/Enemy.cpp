@@ -35,8 +35,8 @@ sf::Vector2f Enemy::getPosition() const
 
 void Enemy::updateMovement(Player *player)
 {
-    sf::Vector2f coord_p = player->getPosition();       // coordonnées joueur
-    sf::Vector2f coord_npc = this->shape.getPosition(); // coordonnées ennemi
+    sf::Vector2f coord_p = player->getPosition(); // coordonnées joueur
+    sf::Vector2f coord_npc = this->getPosition(); // coordonnées ennemi
 
     sf::Vector2f direction = coord_p - coord_npc;                                               // direction vers le joueur
     direction = direction / (std::sqrt(direction.x * direction.x + direction.y * direction.y)); // normalisation
@@ -86,8 +86,8 @@ void Enemy::updateCollision(sf::Vector2f thisPos, sf::Vector2f thisSize, sf::Vec
 void Enemy::checkCollision(Enemy &other)
 {
     // Get the position and size of the two Enemy objects
-    sf::Vector2f thisPos = this->shape.getPosition();
-    sf::Vector2f otherPos = other.shape.getPosition();
+    sf::Vector2f thisPos = this->getPosition();
+    sf::Vector2f otherPos = other.getPosition();
     sf::Vector2f thisSize = this->shape.getSize();
     sf::Vector2f otherSize = other.shape.getSize();
 
